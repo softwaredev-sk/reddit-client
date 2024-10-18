@@ -1,0 +1,40 @@
+.sidebar {
+  position: relative;
+  height: 100%;
+  transform: rotateX(180deg);
+  min-width: 0;
+  margin-right: 0.5rem;
+  transition: all 0s;
+  transition: min-width 0.25s;
+}
+
+.sidebar--hidden {
+  min-width: 6.5rem;
+}
+
+.sidebar--visible {
+  min-width: min(95vw, 640px);
+}
+
+.sidebar__buttons {
+  position: sticky;
+  top: 1rem;
+  right: 1rem !important;
+  margin: 1.5rem;
+  padding-right: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.sidebar__buttons--vertical {
+  flex-direction: column;
+}
+
+.sidebar__buttons--horizontal {
+  flex-direction: row;
+  padding: 0;
+}
+
+.sidebar__content {
+  height: 100%;
+}

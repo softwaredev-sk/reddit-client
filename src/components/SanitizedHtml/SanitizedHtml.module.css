@@ -1,0 +1,28 @@
+.sanitized-html {
+  color: var(--text-color-faded);
+  word-break: break-word;
+}
+
+.sanitized-html td,
+.sanitized-html th {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.sanitized-html li {
+  margin-left: 1rem;
+}
+
+.sanitized-html li::marker {
+  margin-right: 2rem;
+}
+
+.sanitized-html a:any-link {
+  color: var(--text-color-link-post);
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.sanitized-html a:hover {
+  text-decoration: underline;
+}

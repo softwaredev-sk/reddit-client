@@ -1,0 +1,58 @@
+@-moz-document url-prefix() {
+  .home__wrapper {
+    scrollbar-color: var(--bg-color-header) var(--bg-color);
+  }
+}
+
+/* padding top became padding bottom due to rotateX applied */
+.home__wrapper {
+  background-color: var(--bg-color-secondary);
+  margin: 0.25rem;
+  height: calc(100dvh - 6.75rem);
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 1.5rem;
+  display: flex;
+  outline: 0.25rem solid var(--outline-color);
+  font-size: 3rem;
+  color: var(--text-color-secondary);
+  min-width: 320px;
+  max-width: 100vw;
+  transform: rotateX(180deg);
+  overflow-x: hidden;
+}
+
+.home__wrapper::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+.home__wrapper::-webkit-scrollbar:horizontal {
+  height: 1.5rem;
+}
+
+/* top and bottom for border are reversed since they are rotated on X-axis to keep scrollbar at the top. */
+.home__wrapper::-webkit-scrollbar-thumb {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  background-color: var(--bg-color-header);
+  cursor: pointer;
+  border: 2px solid var(--bg-color);
+  border-top-width: 4px;
+}
+
+.home__wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-color);
+  border-color: var(--bg-color-header);
+}
+
+.home__wrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.5rem var(--bg-color);
+  border: 0.1rem solid var(--bg-color-header);
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.home__wrapper--blur {
+  filter: blur(0.25rem);
+  pointer-events: none;
+}

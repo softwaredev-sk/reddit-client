@@ -1,0 +1,29 @@
+.icon--fav::after,
+.icon--add-to-fav::after {
+  cursor: pointer;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 0.25rem black);
+}
+
+.icon--add-to-fav::after {
+  content: '\2764';
+  background-color: #fff;
+}
+
+.icon--fav::after {
+  content: '\2764';
+  background-color: var(--bg-color-header);
+}
+.icon--fav,
+.icon--add-to-fav {
+  transition: scale 0.05s;
+}
+.icon--fav:hover,
+.icon--add-to-fav:hover {
+  scale: 1.1;
+}
+.icon--fav:active,
+.icon--add-to-fav:active {
+  scale: 0.95;
+}

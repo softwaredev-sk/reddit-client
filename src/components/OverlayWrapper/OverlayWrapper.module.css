@@ -1,0 +1,48 @@
+@-moz-document url-prefix() {
+  .overlay {
+    scrollbar-color: var(--bg-color-header) var(--bg-color);
+  }
+}
+
+.overlay {
+  position: absolute;
+  border: 0.25rem solid var(--outline-color);
+  font-size: 3rem;
+  z-index: 99999999;
+  -webkit-backdrop-filter: blur(2rem);
+  background-color: rgba(255, 69, 0, 0.25);
+  background-color: rgba(255, 69, 0, 0.5);
+  backdrop-filter: blur(2rem);
+  overflow-y: auto;
+  color: var(--text-color-secondary);
+}
+
+.overlay::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.overlay::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color);
+  border-radius: 999px;
+}
+.overlay::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-color-header);
+}
+.overlay::-webkit-scrollbar-track {
+  background-color: var(--bg-color-header-faded);
+}
+
+.overlay--small {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100dvh - 6rem);
+  padding: 0.5rem;
+}
+.overlay--large {
+  bottom: 0;
+  right: 0;
+  height: calc(100dvh - 6rem);
+  width: 70vw;
+  padding: 2.5rem;
+}

@@ -1,0 +1,138 @@
+.content {
+  margin: 0;
+}
+
+.content__title {
+  position: relative;
+  display: inline-block;
+  font-size: 6rem;
+  text-transform: capitalize;
+}
+
+.content__title::after {
+  content: '';
+  width: 0;
+  height: 0.25rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-color-secondary);
+  transition: width 0.25s;
+}
+
+.content__title:hover::after {
+  width: 100%;
+}
+
+.content__title-link {
+  text-decoration: none;
+  line-height: 1;
+}
+
+.content__post-info {
+  margin-top: 1rem;
+}
+
+.content__post-info > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content--bold {
+  font-weight: 900;
+}
+
+.content__box {
+  position: relative;
+  padding-bottom: 3rem;
+  border-bottom: 0.25rem dotted var(--outline-color);
+}
+
+.content__post {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.content__thumbnail {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.content__post-activity {
+  display: flex;
+  gap: 1rem;
+}
+
+.content pre {
+  padding: 0.25rem 1rem;
+  box-shadow: -1rem 1rem 3rem black;
+  white-space: pre-wrap;
+  margin-top: 2rem;
+  background-color: var(--bg-color-header-faded);
+}
+
+.content__extenal-link {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: square;
+  margin-left: 1em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.content__extenal-link:hover {
+  text-decoration: underline;
+}
+
+.content__image-container {
+  width: 100%;
+  /* width: 50%; */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0 2em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1em;
+  background-color: #ffffffa0;
+}
+
+.content__image-filter {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  z-index: 101;
+  filter: blur(0.5em);
+  opacity: 0.5;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.content__image {
+  display: block;
+  object-fit: contain;
+  max-width: 50%;
+  max-width: max(50%, min(70vw, 200px));
+  z-index: 102;
+}
+
+.content__post h1 {
+  font-size: 2em;
+}
+
+@media (max-width: 720px) {
+  .content__title-link {
+    font-size: 4.5rem;
+  }
+
+  .content__post {
+    flex-direction: column;
+  }
+}

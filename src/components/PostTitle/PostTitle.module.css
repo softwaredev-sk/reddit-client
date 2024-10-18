@@ -1,0 +1,63 @@
+.posts {
+  padding: 0.25rem;
+  text-align: left;
+  padding: 1.75rem;
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.posts:not(:last-child) {
+  border-bottom: 0.25rem solid var(--outline-color);
+}
+
+.posts__helper-arrow {
+  position: absolute;
+  z-index: 9999;
+  right: 2rem;
+  top: 4rem;
+  height: 9.5rem;
+  pointer-events: none;
+  filter: drop-shadow(0 0 0.5rem var(--outline-color));
+}
+
+.posts__post {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.posts__post-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.posts__post-title,
+.posts__post-title span {
+  font-weight: 600;
+  flex: 5;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s linear;
+  cursor: pointer;
+}
+
+.posts__post-title:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
+  color: var(--bg-color-header);
+}
+
+.posts__icon--upvotes {
+  position: relative;
+  top: 1rem;
+  font-size: 5rem;
+}
+
+.posts__upvotes {
+  position: relative;
+  top: -1rem;
+}

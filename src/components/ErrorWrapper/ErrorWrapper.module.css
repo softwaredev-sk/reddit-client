@@ -1,0 +1,43 @@
+.error__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 6.75rem);
+  text-align: center;
+}
+
+.error__page--client {
+  background-color: var(--bg-color-client-error);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.error__children {
+  width: 100%;
+  height: calc(100% - 12rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 6rem;
+  text-shadow: 0 0 1rem var(--text-color-main);
+}
+
+.error__button--close {
+  text-decoration: none;
+  padding: 2.5rem;
+}
+
+.error__button--close:hover {
+  scale: 1.05;
+}
+
+.error__button--close::after {
+  content: '\2718';
+  color: var(--outline-color);
+}
+
+.error--reddit-accent {
+  color: var(--bg-color-header);
+}

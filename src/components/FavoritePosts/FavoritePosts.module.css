@@ -1,0 +1,48 @@
+.favorites {
+  background-color: var(--bg-color-header-faded);
+  height: 100%;
+  height: calc(100% - 8rem);
+  min-width: 320px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.favorites h2 {
+  text-decoration: underline;
+  color: var(--text-color-main);
+  text-shadow: 0 0 1rem var(--outline-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  line-height: 1.2;
+
+  padding: 0.5rem 1rem;
+}
+
+.favorites__list {
+  list-style-position: inside;
+  list-style-type: decimal-leading-zero;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 3.5rem;
+
+  text-transform: capitalize;
+  margin: 1rem;
+}
+
+.favorites__list li::marker {
+  font-weight: bold;
+}
+
+.favorites__empty {
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  width: 100%;
+  max-width: 100%;
+}
+
+.favorites__list a {
+  text-decoration: none;
+}

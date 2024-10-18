@@ -1,0 +1,91 @@
+.add-subreddit__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  border: none;
+  outline: 0.25rem solid var(--outline-color);
+  width: fit-content;
+  max-width: calc(100% - 1rem);
+  padding: 1.5rem 3rem;
+  gap: 1.4rem;
+  margin: 0 auto;
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-secondary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-subreddit__button--submit {
+  width: 100%;
+  border: none;
+  outline: none;
+  outline: 0.25rem solid var(--outline-color);
+  background-color: var(--outline-color);
+  color: var(--text-color-main);
+  font-size: 3rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+}
+
+.add-subreddit__input-label {
+  font-size: 3.75rem;
+  white-space: nowrap;
+}
+
+.add-subreddit__input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: 0.25rem solid var(--text-color-secondary);
+  font-size: 3rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  color: var(--text-color-secondary);
+  text-shadow: 0 0 1rem var(--outline-color);
+}
+
+.add-subreddit__input::placeholder {
+  text-shadow: none;
+}
+
+.add-subreddit__input-container {
+  width: 100%;
+  position: relative;
+}
+
+.add-subreddit__input-container::after {
+  position: absolute;
+  top: -1.4rem;
+  right: -1.4rem;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-subreddit__input-container--true::after {
+  content: '\02714';
+  color: green;
+  border: 1px solid green;
+}
+
+.add-subreddit__input-container--false::after {
+  content: '\02718';
+  color: red;
+  border: 1px solid red;
+}
+
+.add-subreddit__error {
+  color: red;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 0 0 1px blue, 0 0 2rem black;
+}

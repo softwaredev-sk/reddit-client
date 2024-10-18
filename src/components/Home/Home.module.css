@@ -1,0 +1,57 @@
+@-moz-document url-prefix() {
+  .home {
+    scrollbar-color: var(--bg-color-header) var(--bg-color);
+  }
+}
+
+.home {
+  background-color: var(--bg-color-secondary);
+  margin: 0 0.25rem;
+  margin: 0 0.25rem;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 1.5rem;
+  display: flex;
+  outline: 0.25rem solid var(--outline-color);
+
+  font-size: 3rem;
+  color: var(--text-color-secondary);
+  min-width: 0;
+}
+
+.home--scrollable {
+  cursor: grabbing;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.home::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+.home::-webkit-scrollbar:horizontal {
+  height: 1.5rem;
+}
+
+/* top and bottom for border are reversed since they are rotated on X-axis to keep scrollbar at the top. */
+.home::-webkit-scrollbar-thumb {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+  background-color: var(--bg-color-header);
+  cursor: pointer;
+  border: 2px solid var(--bg-color);
+  border-top-width: 4px;
+}
+
+.home::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-color);
+  border-color: var(--bg-color-header);
+}
+
+.home::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.5rem var(--bg-color);
+  border: 0.1rem solid var(--bg-color-header);
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+}

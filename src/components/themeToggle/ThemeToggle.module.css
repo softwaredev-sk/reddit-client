@@ -1,0 +1,53 @@
+.theme-changer {
+  width: 6.5rem;
+  height: 3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 2px;
+  transition: all 0.25s;
+}
+
+.theme-changer__ball {
+  height: calc(100% - 4px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  position: absolute;
+  transition: all 0.25s;
+}
+
+.theme-changer--dark {
+  background-color: white;
+}
+
+.theme-changer--light {
+  background-color: #0f172a;
+}
+
+.theme-changer__ball--dark {
+  left: calc(100% - 3rem + 2px);
+  background-color: #0f172a;
+}
+
+.theme-changer__ball--light {
+  left: 1px;
+  background-color: white;
+}
+
+@media (max-width: 480px) {
+  .theme-changer {
+    width: 3.75rem;
+    height: 2rem;
+  }
+
+  .theme-changer__ball--dark {
+    left: calc(100% - 2rem + 2px);
+  }
+
+  .theme-changer__ball--light {
+    left: 2px;
+  }
+}

@@ -1,0 +1,16 @@
+.toast {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999999999999;
+  color: var(--text-color-danger);
+  background-color: #f408;
+  background-color: var(--outline-color);
+  text-shadow: 0 0 2rem var(--text-color-main);
+  padding: 0.1em 1em;
+  border-radius: 999px;
+  text-align: center;
+  max-width: 100%;
+  min-width: 90%;
+}

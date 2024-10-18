@@ -1,0 +1,119 @@
+.subreddit {
+  padding-bottom: 2rem;
+  border-right: 2px solid var(--outline-color);
+  min-width: min(calc(100vw - 10rem), 460px);
+
+  max-width: 460px;
+
+  max-height: calc(100dvh - 6rem);
+  overflow-y: auto;
+  transform: rotateX(180deg);
+  position: relative;
+}
+
+.subreddit::-webkit-scrollbar {
+  width: 6px;
+}
+
+.subreddit::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background-color: var(--bg-color-header);
+}
+
+.subreddit::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-color);
+  border-color: var(--bg-color-header);
+}
+
+.subreddit::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.5rem var(--bg-color);
+  border: 0.1rem solid var(--bg-color-header);
+  border-radius: 999px;
+}
+
+.subreddit header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.75rem;
+  font-weight: bold;
+  position: sticky;
+  top: 1rem;
+  top: 0;
+  background-color: var(--bg-color-secondary);
+  z-index: 102;
+}
+
+.subreddit__name,
+.subreddit__rename {
+  color: var(--outline-color);
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.subreddit__rename {
+  margin-right: 2rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.subreddit__name a {
+  font-size: 4rem;
+
+  text-decoration: none;
+  --max-lines: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: wrap;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines);
+  line-clamp: var(--max-lines);
+  -webkit-box-orient: vertical;
+  padding-right: 1rem;
+}
+
+.subreddit__name:link {
+  color: var(--outline-color);
+}
+
+.subreddit__hot-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.subreddit--undim {
+  opacity: 1;
+}
+
+.subreddit:has(.subreddit--dim) {
+  overflow-y: hidden;
+}
+
+.subreddit--dim {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.subreddit__error {
+  color: var(--text-color-danger);
+}
+
+.subreddit__empty {
+  text-align: center;
+}
+
+.subreddit__refresh-indicator {
+  margin: 0.25em;
+  padding: 0;
+  width: calc(100% - 0.5em);
+  height: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 103;
+  display: none;
+}

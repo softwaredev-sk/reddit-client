@@ -1,0 +1,140 @@
+:root {
+  font-family: 'Caveat', cursive;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-color: #fd8255;
+  --bg-color-header: #ff4500;
+  --bg-color-header-faded: #dd450099;
+  --bg-color-client-error: #00000080;
+  --text-color-danger: red;
+}
+
+.light {
+  --bg-color-secondary: #fff;
+  --bg-color-components: #fff;
+  --text-color-main: #fff;
+  --text-color-secondary: #000000;
+  --text-color-main-shadow: #000;
+  --text-color-faded: #1a1a1a;
+  --text-color-secondary-shadow: #fff;
+  --text-color-hover: #111;
+  --text-color-link-post: #00f;
+  --text-color-link-comment: #07f;
+  --outline-color: #000000;
+  --outline-color-invert: #fff;
+}
+
+.dark {
+  --bg-color-secondary: #1c1c1c;
+  --bg-color-components: #333;
+  --text-color-main: #000;
+  --text-color-main-shadow: #000;
+  --text-color-secondary: #fff;
+  --text-color-faded: #ddd;
+  --text-color-secondary-shadow: #fff;
+  --text-color-hover: #333;
+  --text-color-link-post: #aaf;
+  --text-color-link-comment: #00ffff;
+  --outline-color: #fff;
+  --outline-color-invert: #000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--bg-color-header);
+  color: white;
+}
+
+html {
+  font-size: 50%;
+  /* font-size: 62.5%; */
+}
+
+body {
+  margin: 0;
+  /* padding-bottom: 0.25rem; */
+  /* display: flex; */
+  box-sizing: inherit;
+  color: var(--text-color-secondary);
+  background-color: var(--bg-color-header);
+  overflow: hidden;
+
+  font-size: 2rem;
+}
+
+a:any-link {
+  color: inherit;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+input {
+  font-family: inherit;
+}
+
+[class$='--reddit-accent'] {
+  color: var(--bg-color-header);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color-client-error: #ffffff80;
+  }
+
+  .light {
+    --bg-color-secondary: #1c1c1c;
+    --bg-color-components: #333;
+    --text-color-main: #000;
+    --text-color-main-shadow: #000;
+    --text-color-secondary: #fff;
+    --text-color-faded: #ddd;
+    --text-color-secondary-shadow: #fff;
+    --text-color-hover: #333;
+    --text-color-link-post: #aaf;
+    --text-color-link-comment: #00ffff;
+    --outline-color: #fff;
+    --outline-color-invert: #000;
+  }
+
+  .dark {
+    --bg-color-secondary: #fff;
+    --bg-color-components: #fff;
+    --text-color-main: #fff;
+    --text-color-main-shadow: #000;
+    --text-color-secondary: #000000;
+    --text-color-faded: #1a1a1a;
+    --text-color-secondary-shadow: #fff;
+    --text-color-hover: #111;
+    --text-color-link-post: #00f;
+    --text-color-link-comment: #07f;
+    --outline-color: #000000;
+    --outline-color-invert: #fff;
+  }
+}

@@ -1,0 +1,12 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading img {
+  width: 12rem;
+  height: 12rem;
+  filter: drop-shadow(0 0 1rem var(--outline-color));
+  margin-top: 4rem;
+}

@@ -1,0 +1,76 @@
+.sidebar__button {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  aspect-ratio: 1;
+  background-color: transparent;
+  color: var(--text-color-secondary);
+  border: none;
+  outline: 0.25rem solid var(--outline-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar__button::before {
+  content: '\002B';
+  font-size: 6rem;
+  position: absolute;
+  top: -2.5rem;
+  left: 0.25rem;
+  transform-origin: center;
+  transition: all 0.5s;
+  aspect-ratio: 1;
+}
+
+.sidebar__button--newsub--hidden::before {
+  transform: rotate(0deg);
+}
+
+.sidebar__button--fav-posts--visible,
+.sidebar__button--newsub--visible {
+  background-color: var(--bg-color-header-faded);
+}
+
+.sidebar__button--newsub--visible::before {
+  left: 0.9rem;
+  transform: rotate(45deg);
+}
+
+/* filler ruleset to avoid classname as undefined in rendered html */
+.sidebar__button--newsub::before {
+  color: currentColor;
+}
+
+.sidebar__button--fav-posts::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  top: 1rem;
+  top: 0.25rem;
+  left: 0.05rem;
+  line-height: 1;
+  width: 100%;
+}
+
+.sidebar__button--fav-posts--visible::before,
+.sidebar__button--fav-posts--hidden::before {
+  content: '\2764';
+  background-color: var(--bg-color-header);
+  background-clip: text;
+  color: transparent;
+  position: absolute;
+  filter: drop-shadow(0 0 2px blue);
+  filter: drop-shadow(0 0 2px black);
+}
+
+@media (max-width: 720px) {
+  .sidebar__button--fav-posts::before {
+    font-size: 2.5rem;
+    top: 1rem;
+    top: 0.25rem;
+    left: 0.05rem;
+  }
+}
