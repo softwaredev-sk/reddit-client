@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
 import styles from './Subreddit.module.css';
-import PopupMenu from '../PopUpMenu/PopupMenu';
+import PopupMenu from '../PopupMenu/PopupMenu';
 import PostTitle from '../PostTitle/PostTitle';
 import { useSubredditContext } from '../../customHooks/useSubredditContext';
 import Loading from '../Loading/Loading';
