@@ -11,3 +11,9 @@ Currently, two official plugins are available:
 ## Project built for https://roadmap.sh/projects/reddit-client
 
 - Project hosted at https://reddit-hot-posts.vercel.app
+
+- You can scroll horizontally with the mouse wheel while holding the Shift Key, or click and drag while holding the Ctrl Key.
+- You can close the post page by swiping down the overlay element (Touch devices).
+- You can open and close the sidebar by swiping left or right accordingly (Touch devices).
+- You can close the navigation bar on the Mobile Screen by swiping right (Touch devices).
+- Design replicated from the challenge page.
